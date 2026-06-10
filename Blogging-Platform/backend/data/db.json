@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "id": "user_initial_1",
+      "name": "Sarah Connor",
+      "email": "sarah@inkflow.com",
+      "password": "$2a$10$T8MvR.eC512Fw63ZlU7CmeW7pB/7X50d4w2jX/Hl3bL9H6xMh3q1G",
+      "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+      "createdAt": "2026-06-01T10:00:00.000Z"
+    },
+    {
+      "id": "user_initial_2",
+      "name": "Alex Mercer",
+      "email": "alex@inkflow.com",
+      "password": "$2a$10$T8MvR.eC512Fw63ZlU7CmeW7pB/7X50d4w2jX/Hl3bL9H6xMh3q1G",
+      "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "createdAt": "2026-06-02T12:00:00.000Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": "post_1",
+      "title": "Mastering React 19: Action Hooks and Form States",
+      "summary": "Dive into the upcoming features of React 19, exploring the new Action hooks, useActionState, useOptimistic, and how they simplify form handling.",
+      "content": "React 19 introduces a paradigm shift in how we handle async operations, particularly in forms. Traditionally, managing loading states, error states, and optimistic updates required multiple state variables and complex handler logic.\n\n### The Rise of Actions\nAn Action is a function that performs an asynchronous operation. When a transition starts, React automatically tracks the pending state, errors, and completes the action lifecycle.\n\n```javascript\n// React 19 Style form handling\nconst [state, formAction, isPending] = useActionState(\n  async (prevState, formData) => {\n    const error = await updateProfile(formData.get('name'));\n    if (error) return { success: false, error };\n    return { success: true };\n  },\n  { success: false }\n);\n```\n\n### Optimistic Updates\nThe `useOptimistic` hook allows developers to show a temporary state while an async transaction is in progress, reverting it immediately if the transaction fails. This is highly effective for building responsive interfaces like likes, additions, and comment submissions.\n\nTry implementing these Action hooks in your next project to build a highly responsive and clean frontend architecture!",
+      "tags": ["tech", "coding", "webdev"],
+      "author": "user_initial_1",
+      "authorName": "Sarah Connor",
+      "authorAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+      "readTime": "3 min read",
+      "likes": 12,
+      "createdAt": "2026-06-08T08:30:00.000Z"
+    },
+    {
+      "id": "post_2",
+      "title": "Aesthetic Design Systems: Incorporating Glassmorphism Strategically",
+      "summary": "How to design UI screens that feel premium and state-of-the-art without sacrificing accessibility, readability, and contrast ratios.",
+      "content": "Glassmorphism has taken the design world by storm, blending translucency, soft shadows, and colorful gradients to make UIs feel layered and premium.\n\n### The Core Rules of Glassmorphism\n1. **Background Contrast:** Glass elements rely heavily on the visual content behind them. Use vibrant radial color gradients or soft light-producing backdrops to make the blur effect pop.\n2. **Border Details:** Add a thin, translucent white border (1px solid rgba(255, 255, 255, 0.08)) to define shape borders and give a glass-cutting shine.\n3. **Accessibility Warning:** Never place core layout elements on low-contrast glass panels without sufficient overlay opacity. Standard text should always retain a minimum 4.5:1 contrast ratio against the backing surface.\n\n```css\n.glass-card {\n  background: rgba(18, 18, 26, 0.7);\n  backdrop-filter: blur(12px);\n  border: 1px solid rgba(255, 255, 255, 0.04);\n  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);\n}\n```\n\nBy following these constraints, you can construct layouts that look elite, feel fast, and remain completely accessible.",
+      "tags": ["design", "webdev"],
+      "author": "user_initial_2",
+      "authorName": "Alex Mercer",
+      "authorAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "readTime": "4 min read",
+      "likes": 24,
+      "createdAt": "2026-06-09T14:15:00.000Z"
+    },
+    {
+      "id": "post_3",
+      "title": "Improving Productivity: The 5-Minute Block Scheduling Method",
+      "summary": "Ditch the traditional to-do list for calendar-focused block schedules to regain focus, prevent burnout, and manage cognitive energy levels.",
+      "content": "Most to-do lists fail because they tell you *what* to do, but not *when* to do it. Block scheduling maps tasks directly to short blocks of time in your day.\n\n### Why Lists Fail\nTo-do lists create choice fatigue. When you finish a task, looking at a list of 10 more tasks forces your brain to decide what to do next, depleting willpower.\n\n### Implementing Block Schedules\n1. **Batch Similar Work:** Put email replies, content reading, and administrative tasks into dedicated 30-minute slots.\n2. **Deep Work Blocks:** Schedule 90-minute blocks for deep cognitive tasks like programming or planning, turning off all push alerts.\n3. **Energy Management:** Put high-priority tasks in your morning peak focus hours and low-priority tasks in your post-lunch slump.\n\nGive it a try this week and witness how much cognitive space you recover!",
+      "tags": ["productivity", "lifestyle"],
+      "author": "user_initial_1",
+      "authorName": "Sarah Connor",
+      "authorAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+      "readTime": "3 min read",
+      "likes": 8,
+      "createdAt": "2026-06-10T09:00:00.000Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": "comment_1",
+      "post": "post_1",
+      "author": "user_initial_2",
+      "authorName": "Alex Mercer",
+      "authorAvatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?auto=format&fit=crop&w=150&h=150&q=80",
+      "content": "This is a great write-up! I've been experimenting with React 19 in beta and the action hook cleanup is genuinely refreshing compared to traditional useEffect form tracking.",
+      "createdAt": "2026-06-08T09:12:00.000Z"
+    },
+    {
+      "id": "comment_2",
+      "post": "post_2",
+      "author": "user_initial_1",
+      "authorName": "Sarah Connor",
+      "authorAvatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80",
+      "content": "The border detail is extremely underrated! Adding that 1px solid translucent white line transforms flat elements into looking like real polished glass.",
+      "createdAt": "2026-06-09T16:40:00.000Z"
+    }
+  ]
+}
