@@ -1,20 +1,20 @@
-# 🌟 Multi-Project Full-Stack Workspace
+# Multi-Project Full-Stack Workspace
 
 This workspace houses two decoupled, production-ready full-stack applications built with modern engineering practices, premium obsidian styling systems, and zero-setup database connectivity.
 
 ---
 
-## 📂 Repository Contents
+##  Repository Contents
 
 The repository is structured into two standalone project ecosystems:
 
-### 1. [🔐 Authentication System](./Authentication-System)
+### 1. [ Authentication System](./Authentication-System)
 *   **Location**: `Authentication-System/`
 *   **Core Focus**: JWT-based session security, secure cookie-based token handling, and a Silent Token Refresh background execution flow.
 *   **Key Feature**: Includes a live "Security logs panel" rendered in the dashboard dashboard to monitor silent refresh cycles and security events in real-time.
 *   **Ports**: Backend: `5000` | Frontend: `5173`
 
-### 2. [✍️ Blogging Platform](./Blogging-Platform)
+### 2. [Blogging Platform](./Blogging-Platform)
 *   **Location**: `Blogging-Platform/`
 *   **Core Focus**: Content composition, paginated feed rendering, reactive query search, tag filters, and a multi-level role moderation commenting system.
 *   **Key Feature**: Authenticated writer restrictions (preventing unauthorized post modification) combined with comment administration tools (post authors can delete any comment on their post).
@@ -22,7 +22,7 @@ The repository is structured into two standalone project ecosystems:
 
 ---
 
-## 🛠️ Architecture & Shared Features
+##  Architecture & Shared Features
 
 Both projects share a cohesive backend/frontend design pattern:
 1.  **Dual Database Support (Zero-Setup)**:
@@ -32,7 +32,7 @@ Both projects share a cohesive backend/frontend design pattern:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Project 1: Start the Authentication System
 
